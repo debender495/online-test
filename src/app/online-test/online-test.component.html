@@ -1,0 +1,24 @@
+ <h3 id="user-name">Welcome {{person.name}}</h3>
+<h2>Please complete the test.</h2>
+<form #quizForm="ngForm" (ngSubmit)="onSubmit(quizForm)">
+
+ <div class="card p-2 mb-2" *ngFor="let quiz of questionList">
+     <div class="card-body">
+         <label> {{ getQuestion(quiz) }}</label> 
+      <div *ngFor="let option of quiz.options; let i=index">
+          <div class="custom-control custom-radio">
+              <input 
+              type="radio" 
+              class="custom-control-input" 
+              id="{{quiz.questionKey+''+i}}" 
+              name={{quiz.questionKey}}
+              ngModel
+              [value]="option.value"
+              (change)="onSelectionAnswer(quiz.questionKey, option.value, option)">
+              <label class="custom-control-label" for="{{quiz.questionKey+''+i}}">{{option.key}}</label>
+            </div>
+      </div>
+     </div>
+ </div>
+ <button class="btn btn-outline-primary" type="submit">Submit Test</button>
+</form>

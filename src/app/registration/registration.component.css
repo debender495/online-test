@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* CSS Document */
+/*General*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	color: #666;
+	font-size: 13px;
+	/* background-color: #c3cbd0 !important;  */
+	font-weight:normal; height:100vh
+}
+
+.login {
+	margin-top: 200px;
+}
+.login .content {
+	background: url(/assets/images/bg-white-lock.png) repeat;
+	width: 400px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding: 30px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.login .content h3 {
+	color: #00263e;
+}
+.login .content p, .login .content label {
+	color: #fff;
+}
+
+
